@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>Landing Page</title>
+    <style>
+        .logo {
+            width: 100px; /* Set width for the logo */
+            height: 100px; /* Set height for the logo */
+            border-radius: 70%; /* Make the logo circular */
+            background-image: url('logo.png'); /* Replace with your logo image path */
+            background-size: cover;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 transition duration-500">
+
+    <!-- Header -->
+    <header class="bg-white dark:bg-gray-800 shadow">
+        <div class="container mx-auto flex justify-between items-center p-5">
+            <div class="logo"></div>
+            <nav class="hidden md:flex space-x-4">
+                <a href="#" class="hover:text-blue-500">Home</a>
+                <a href="#about" class="hover:text-blue-500">About</a>
+                <a href="#services" class="hover:text-blue-500">Services</a>
+                <a href="#contact" class="hover:text-blue-500">Contact</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-600 hover:text-blue-500 focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero bg-cover bg-center h-screen" style="background-image: url('background.jpg');">
+        <div class="flex items-center justify-center h-full bg-black bg-opacity-50">
+            <div class="text-center text-white">
+                <h1 class="text-5xl md:text-6xl font-bold mb-4">Welcome to my site</h1>
+                <p class="mb-6">I won't guarantee that my site is work correctly.</p>
+                <a href="#contact" class="bg-red-500 hover:bg-red-700 text-black px-6 py-2 rounded">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-100 dark:bg-gray-800">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8 text-black bg-white p-2 inline-block">Our famous people who work with US</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="service-card bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+                    <i class="fas fa-cog fa-2x mb-4"></i>
+                    <h3 class="text-xl font-semibold">Miss Gulshat</h3>
+                    <p>Она лучшая</p>
+                </div>
+                <div class="service-card bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+                    <i class="fas fa-paint-brush fa-2x mb-4"></i>
+                    <h3 class="text-xl font-semibold">Islam</h3>
+                    <p>Он лучший</p>
+                </div>
+                <div class="service-card bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+                    <i class="fas fa-chart-line fa-2x mb-4"></i>
+                    <h3 class="text-xl font-semibold">Nursultan</h3>
+                    <p>Еще не исследовано</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="py-20 bg-gray-200 dark:bg-gray-900">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-8">Contact Us (not recommended)</h2>
+            <form class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg mx-auto w-full sm:w-1/2">
+                <input type="text" placeholder="Name" class="border rounded px-4 py-2 w-full mb-4">
+                <input type="email" placeholder="Email" class="border rounded px-4 py-2 w-full mb-4">
+                <textarea placeholder="Message" class="border rounded px-4 py-2 w-full mb-4" rows="4"></textarea>
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white px-6 py-2 rounded">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 py-5">
+        <div class="container mx-auto flex justify-between items-center">
+            <div>&copy; 2025 Islam. All rights not reserved.</div>
+            <div class="space-x-4">
+                <a href="#" class="hover:text-white"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="hover:text-white"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-white"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const navLinks = document.querySelector('nav');
+
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('hidden');
+            navLinks.classList.toggle('block');
+        });
+    </script>
+
+</body>
+</html>
+

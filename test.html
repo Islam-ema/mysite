@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <title>Landing Page</title>
+    <style>
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 70%;
+            background-image: url('logo.png');
+            background-size: cover;
+        }
+        /* Добавим стили для адаптивности */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Скрыть меню на маленьких экранах */
+            }
+            .mobile-nav {
+                display: block; /* Показать мобильное меню */
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 transition duration-500">
+
+    <!-- Header -->
+    <header class="bg-white shadow">
+        <div class="container mx-auto flex justify-between items-center p-5">
+            <div class="logo"></div>
+            <nav class="nav-links hidden md:flex items-center space-x-4 border p-2 rounded-md bg-gray-200 border-black">
+                <a href="#" class="text-black hover:text-blue-500">Home</a>
+                <a href="#about" class="text-black hover:text-blue-500">About</a>
+                <a href="#services" class="text-black hover:text-blue-500">Services</a>
+                <a href="#contact" class="text-black hover:text-blue-500">Contact</a>
+            </nav>
+            <div class="mobile-nav md:hidden">
+                <button id="menu-btn" class="text-gray-600 hover:text-blue-500 focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero bg-cover bg-center h-screen" style="background-image: url('background.jpg');">
+        <div class="flex items-center justify-center h-full bg-black bg-opacity-50">
+            <div class="text-center text-white animate__animated animate__fadeIn">
+                <h1 class="text-5xl md:text-6xl font-bold mb-4"><span class="text-red-500">My</span> Site</h1>
+                <p class="mb-6">I won't guarantee that my site is working correctly (actually my site is not actually "my") (thanks to chatgpt and ms gulshat).</p>
+                <a href="#contact" class="bg-red-500 hover:bg-red-700 text-black px-6 py-2 rounded">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8 text-black  p-2 inline-block">Our famous people who work with US</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="service-card bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+                    <i class="fas fa-cog fa-2x mb-4"></i>
+                    <h3 class="text-xl font-semibold">Miss Gulshat</h3>
+                    <p>Она лучшая</p>
+                </div>
+                <div class="service-card bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+                    <i class="fas fa-paint-brush fa-2x mb-4"></i>
+                    <h3 class="text-xl font-semibold">Islam</h3>
+                    <p>Он лучший</p>
+                </div>
+                <div class="service-card bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+                    <i class="fas fa-chart-line fa-2x mb-4"></i>
+                    <h3 class="text-xl font-semibold">Nursultan</h3>
+                    <p>Еще не исследовано</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="py-20 bg-gray-200">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-8">Contact Us (not recommended)</h2>
+            <form class="bg-white p-8 rounded-lg shadow-lg mx-auto w-full sm:w-1/2 border-2 border-black">
+                <input type="text" placeholder="Name" class="border rounded px-4 py-2 w-full mb-4 border-black">
+                <input type="email" placeholder="Email" class="border rounded px-4 py-2 w-full mb-4 border-black">
+                <textarea placeholder="Message" class="border rounded px-4 py-2 w-full mb-4 border-black" rows="4"></textarea>
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white px-6 py-2 rounded">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 py-5">
+        <div class="container mx-auto flex justify-between items-center">
+            <div>&copy; 2025 Islam. All rights not reserved.</div>
+            <div class="space-x-4">
+                <a href="#" class="hover:text-white"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="hover:text-white"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-white"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('hidden');
+            navLinks.classList.toggle('block');
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
